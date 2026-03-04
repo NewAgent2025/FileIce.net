@@ -1,0 +1,60 @@
+/*	
+	Platino - App Template
+	Stefano Giliberti, kompulsive@gmail.com - lessbit.com
+*/
+
+/* Transparency */
+* html #header h1#logo  { 
+    background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/logo.png", sizingMethod="crop"); 	        
+}
+* html a.promo-link  { 
+    background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src="images/promo-link.png", sizingMethod="crop"); 	        
+}
+
+/* Sub-menu positioning fix */
+#promo-container {
+	height:auto !important;
+	height:40px;
+}
+
+/* Info strip minimum height fix */
+.info-strip {
+	height:auto !important;
+	height:120px;
+}
+
+/* Right Column minimum height fix */
+.right-column {
+	height:auto !important;
+	height:400px;
+}
+ul.tabs li a {
+	color:#777 !important;
+}
+ul.tabs li a.selected {
+	color:black !important;
+}
+.news-thumb-wrapper h1 { padding:9.5px; }
+.featured-inner h1 { position:absolute; top:160px; left:39px; background:#000; color:#FFF; font-size:30px; padding:7.5px 10px 7.5px 10px; }
+/*
+     FILE ARCHIVED ON 19:13:13 Mar 25, 2012 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:17:06 Nov 12, 2024.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 0.559
+  exclusion.robots: 0.018
+  exclusion.robots.policy: 0.009
+  esindex: 0.011
+  cdx.remote: 5.813
+  LoadShardBlock: 159.858 (3)
+  PetaboxLoader3.datanode: 170.686 (4)
+  load_resource: 113.891
+  PetaboxLoader3.resolve: 84.993
+*/

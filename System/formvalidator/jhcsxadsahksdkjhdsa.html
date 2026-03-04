@@ -1,0 +1,78 @@
+<html>
+<head>
+<link media="all" type="text/css" rel="stylesheet" href="css/reset.css"></link>
+<link media="all" type="text/css" rel="stylesheet" href="css/framestyle.css"></link>
+<link media="all" rel="stylesheet" type="text/css" href="css/tooltip.css" />
+<script type="text/javascript" language="javascript" src="js/tooltip.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/myradpro.font.js"></script>
+<noscript><meta http-equiv="refresh" content="0;url=http://fileice.net/download.php?file=3zq9g" /></noscript>
+</head>
+<html>
+<head>
+<link media="all" type="text/css" rel="stylesheet" href="css/reset.css"></link>
+<link media="all" type="text/css" rel="stylesheet" href="css/framestyle.css"></link>
+<link media="all" rel="stylesheet" type="text/css" href="css/tooltip.css" />
+<script type="text/javascript" language="javascript" src="js/tooltip.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.all.min.js"></script>
+<script type="text/javascript" src="js/global.js"></script>
+<script type="text/javascript" src="js/cufon-yui.js"></script>
+<script type="text/javascript" src="js/myradpro.font.js"></script>
+<noscript><meta http-equiv="refresh" content="0;url=http://fileice.net/download.php?file=3zq9g" /></noscript>
+</head>
+<body>
+<div align="center" style="padding: 5px 10px 5px 10px;">
+<br/>
+<h2>Please complete a quick offer to continue!</h2>
+<div id="desc"><p>You'll have your download in no time! Just complete any advertiser-sponsored offer below with your valid information and the download will unlock.</p></div>
+<div id="loadingimg" style="display:none;"><img src="images/loading.gif" alt="loading"></div><iframe style="display:none;" id="offercheck" width="0" height="0" border="0" src=""></iframe>
+<br />
+<div id="spcng"><br/><br/></div>
+
+<div class="offer_holder">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+
+    <!-- Table Structure -->
+    <table align="center" width="75%" border="0" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr class="table-header">
+                <th width="100%" class="third">
+                    <h5>Survey List</h5>
+                </th>
+            </tr>
+        </thead>
+        <tbody id="offer-list">
+            <tr>
+                <td colspan="1" class="third">Loading Offers...</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script type="text/javascript">
+        $(function() {
+            $.getJSON("https://www.cpagrip.com/common/offer_feed_json.php?user_id=696220&pubkey=cca11884c3ce8eb2c57f6ce235040d52&limit=5", function(json_data){
+                var offer_text = '';
+                $.each(json_data.offers, function(index, offer){
+                    // Use custom tracking domain for the offer links
+                    offer.offerlink = offer.offerlink.replace('www.cpagrip.com', 'motifiles.com');
+
+                    // Alternate background color for each row
+                    var row_style = (index % 2 === 0) ? '' : 'style="background-color: rgb(247, 247, 247);"';
+
+                    offer_text += '<tr ' + row_style + '><td class="third"><b><span class="hotspot" onmouseover="tooltip.show(\'<p>'+ offer.description +'</p>\'); showinfo(\'Offer name: '+ offer.title +'<br/>File unlocks after: Email submitted\');" onmouseout="tooltip.hide(); clearinfo();"><a target="_blank" onclick="launch();" href="'+offer.offerlink+'">'+offer.title+'</a></span></b></td></tr>';
+                });
+                // Populate the offer list in the table
+                $("#offer-list").html(offer_text);
+            });
+        });
+    </script>
+</div>
+
+		</table>
+</div>
+</body>
+</html>
